@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { Shield, Clock, Headphones, TrendingUp, Star, ChevronRight, Instagram, Youtube, Twitter, Facebook } from 'lucide-react';
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://app.sobooster.online';
@@ -198,6 +199,8 @@ export default function HomePage() {
             © {new Date().getFullYear()} SOBooster. Tous droits réservés.
           </p>
           <div className="flex gap-4">
+            <Link href="/privacy" className="text-xs text-gray-400 hover:text-gray-600">Confidentialité</Link>
+            <Link href="/terms" className="text-xs text-gray-400 hover:text-gray-600">CGU</Link>
             <a href={`${APP_URL}/login`} className="text-xs text-gray-400 hover:text-gray-600">Connexion</a>
             <a href={`${APP_URL}/register`} className="text-xs text-gray-400 hover:text-gray-600">Inscription</a>
           </div>
