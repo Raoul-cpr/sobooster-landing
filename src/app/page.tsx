@@ -5,10 +5,10 @@ import { Shield, Clock, Headphones, TrendingUp, Star, ChevronRight, Instagram, Y
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://app.sobooster.online';
 
 const stats = [
-  { value: '50K+', label: 'Commandes livrées' },
   { value: '6 000+', label: 'Services disponibles' },
-  { value: '99,8%', label: 'Taux de satisfaction' },
+  { value: '10+', label: 'Plateformes supportées' },
   { value: '24/7', label: 'Support disponible' },
+  { value: '~2 min', label: 'Pour commander' },
 ];
 
 const trustBadges = [
