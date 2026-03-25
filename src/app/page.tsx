@@ -1,6 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import type { Metadata } from 'next';
 import { Shield, Clock, Headphones, TrendingUp, Star, ChevronRight, Instagram, Youtube, Twitter, Facebook } from 'lucide-react';
+
+export const metadata: Metadata = {
+  alternates: { canonical: '/' },
+};
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://app.sobooster.online';
 

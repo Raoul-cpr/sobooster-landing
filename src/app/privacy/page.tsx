@@ -3,7 +3,9 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Politique de confidentialité — SOBooster',
+  title: 'Politique de confidentialité',
+  description: 'Politique de confidentialité de SOBooster. Découvrez comment nous protégeons vos données personnelles au Burkina Faso.',
+  alternates: { canonical: '/privacy' },
 };
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://app.sobooster.online';

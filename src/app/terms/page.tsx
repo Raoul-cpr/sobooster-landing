@@ -3,7 +3,9 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Conditions générales d'utilisation — SOBooster",
+  title: "Conditions générales d'utilisation",
+  description: "Conditions générales d'utilisation de SOBooster. Règles d'utilisation de notre plateforme de boost de réseaux sociaux.",
+  alternates: { canonical: '/terms' },
 };
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://app.sobooster.online';
