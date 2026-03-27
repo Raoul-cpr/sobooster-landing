@@ -80,7 +80,15 @@ jobs:
           file: Dockerfile
           push: true
           platforms: ${{ env.DOCKER_PLATFORM }}
-          build-args: NEXT_PUBLIC_APP_URL=${{ vars.NEXT_PUBLIC_APP_URL }}
+          build-args: |
+            NEXT_PUBLIC_APP_URL=${{ vars.NEXT_PUBLIC_APP_URL }}
+            NEXT_PUBLIC_FIREBASE_API_KEY=${{ vars.NEXT_PUBLIC_FIREBASE_API_KEY }}
+            NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=${{ vars.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN }}
+            NEXT_PUBLIC_FIREBASE_PROJECT_ID=${{ vars.NEXT_PUBLIC_FIREBASE_PROJECT_ID }}
+            NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=${{ vars.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET }}
+            NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=${{ vars.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID }}
+            NEXT_PUBLIC_FIREBASE_APP_ID=${{ vars.NEXT_PUBLIC_FIREBASE_APP_ID }}
+            NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=${{ vars.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID }}
           tags: |
             ${{ steps.meta.outputs.dockerhub_namespace }}/${{ env.IMAGE_NAME_PREFIX }}-landing:${{ steps.meta.outputs.image_tag }}
             ${{ steps.meta.outputs.dockerhub_namespace }}/${{ env.IMAGE_NAME_PREFIX }}-landing:latest
